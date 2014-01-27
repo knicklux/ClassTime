@@ -54,7 +54,7 @@ static void do_init(void) {
   time_layer = text_layer_create(GRect(29, 54, 144-40 /* width */, 168-54 /* height */));
   text_layer_set_text_color(time_layer, GColorWhite);
   text_layer_set_background_color(time_layer, GColorClear);
-  text_layer_set_font(time_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD));]
+  text_layer_set_font(time_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD));
   
   // INIT the lessonArray
   initLessonArray();
