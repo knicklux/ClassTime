@@ -12,6 +12,13 @@
 //Define Debug true or false
 #define DEBUG 1
 
+// Function proto-types
+static void handle_second_tick(struct tm* tick_time, TimeUnits units_changed);
+static void do_init(void);
+void initLessonArray(void);
+static void do_deinit(void);
+int main(void);
+
 // App-specific data
 Window *window; // All apps must have at least one window
 TextLayer *time_layer; // The clock
