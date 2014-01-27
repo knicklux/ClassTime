@@ -10,7 +10,7 @@
 #define lessonNum 16
 
 //Define Debug true or false
-#define DEBUG 1
+#define DEBUG 0
 
 // Function proto-types
 static void handle_second_tick(struct tm* tick_time, TimeUnits units_changed);
