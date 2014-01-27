@@ -33,17 +33,16 @@ static void handle_second_tick(struct tm* tick_time, TimeUnits units_changed) {
 	int timeint = -1;
 		
 #if DEBUG
-	//If DEBUG, test handle_second displaying a random number
-	timeint = rand();
+	//If DEBUG, test handle_second displaying the difference to the first lesson
+	timeint = (int)difftime(mktime(tick_time), mktime(lessonArray[index]));
 #else
-	while (timeint < 0 && index < lessonNum){
-	timeint = (int)difftime(mktime(lessonArray[index], mktime(tick_time)));
+	while ((timeint = (int)difftime(mktime(tick_time), mktime(lessonArray[index])))) < 0 && index < lessonNum){
 	++index;
 	}
 #endif
 	
-  //strftime(time_text, sizeof(time_text), "%T", tick_time);
-  snprintf(time_text, sizeof(time_text), "%d", timeint); 
+  strftime(time_text, sizeof(time_text), "%T", timeint);
+  //snprintf(time_text, sizeof(time_text), "%T", timeint); 
   text_layer_set_text(time_layer, time_text);
 }
 
