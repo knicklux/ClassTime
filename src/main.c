@@ -37,7 +37,7 @@ static void handle_second_tick(struct tm* tick_time, TimeUnits units_changed) {
 	timeint = rand();
 #else
 	while (timeint < 0 && index < lessonNum){
-	timeint = (int)difftime(mktime(tick_time), mktime(lessonArray+index));
+	timeint = (int)difftime(mktime(lessonArray[index], mktime(tick_time)));
 	++index;
 	}
 #endif
