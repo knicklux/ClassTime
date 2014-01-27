@@ -1,0 +1,18 @@
+{
+    "versionLabel": "1.0",
+    "uuid": "6a4b37d2-c488-49b5-8846-0b91a60b27cd",
+    "appKeys": {},
+    "longName": "ClassTime3",
+    "versionCode": 1,
+    "capabilities": [
+        ""
+    ],
+    "shortName": "ClassTime3",
+    "companyName": "Niwis",
+    "watchapp": {
+        "watchface": true
+    },
+    "resources": {
+        "media": []
+    }
+}
