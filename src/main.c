@@ -36,7 +36,7 @@ static void handle_second_tick(struct tm* tick_time, TimeUnits units_changed) {
 #endif
 	
   //strftime(time_text, sizeof(time_text), "%T", tick_time);
-  snprintf(time_text, sizeof(time_text), "%T", timeint); 
+  snprintf(time_text, sizeof(time_text), "%d", timeint); 
   text_layer_set_text(time_layer, time_text);
 }
 
