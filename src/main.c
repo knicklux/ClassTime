@@ -48,7 +48,6 @@ static void do_init(void) {
   window = window_create();
   window_stack_push(window, true);
   window_set_background_color(window, GColorBlack);
-  initLessons(); //err
 
   // Init the text layer used to show the time
   time_layer = text_layer_create(GRect(29, 54, 144-40 /* width */, 168-54 /* height */));
