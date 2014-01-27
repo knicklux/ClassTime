@@ -10,7 +10,7 @@
 #define lessonNum 16
 
 //Define Debug true or false
-#define DEBUG 0
+#define DEBUG 1
 
 // Function proto-types
 static void handle_second_tick(struct tm* tick_time, TimeUnits units_changed);
@@ -34,7 +34,7 @@ static void handle_second_tick(struct tm* tick_time, TimeUnits units_changed) {
 		
 #if DEBUG
 	//If DEBUG, test handle_second displaying a random number
-	timeint = rand();
+	timeint = difftime(mktime(tick_time), mktime(lessonArray[0]));
 #else
 	while (timeint < 0 && index < lessonNum){
 	timeint = (int)difftime(mktime(tick_time), mktime(lessonArray[index]));
