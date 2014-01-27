@@ -48,7 +48,7 @@ static void do_init(void) {
   window = window_create();
   window_stack_push(window, true);
   window_set_background_color(window, GColorBlack);
-  initLessons();
+  initLessons(); //err
 
   // Init the text layer used to show the time
   time_layer = text_layer_create(GRect(29, 54, 144-40 /* width */, 168-54 /* height */));
@@ -57,7 +57,7 @@ static void do_init(void) {
   text_layer_set_font(time_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD));
   
   // INIT the lessonArray
-  initLessonArray();
+  initLessonArray(); //err
 
   // Ensures time is displayed immediately (will break if NULL tick event accessed).
   // (This is why it's a good idea to have a separate routine to do the update itself.)
@@ -69,7 +69,7 @@ static void do_init(void) {
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(time_layer));
 }
 
-void initLessonArray(void){
+void initLessonArray(void){ //err
 	int sec_delay = 49;
         
 	static struct tm lesson_onetwo_b;
